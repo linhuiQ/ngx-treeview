@@ -42,6 +42,7 @@ export class BookService {
             ]
         });
         const othersCategory = new TreeviewItem({ text: 'Others', value: 3, collapsed: true, disabled: true });
-        return [childrenCategory, itCategory, teenCategory, othersCategory];
+        //return [childrenCategory, itCategory, teenCategory, othersCategory];
+        return [itCategory];
     }
 }

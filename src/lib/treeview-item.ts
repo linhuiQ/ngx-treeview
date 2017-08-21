@@ -127,16 +127,19 @@ export class TreeviewItem {
         }
     }
 
-    getCheckedItems(): TreeviewItem[] {
+    getCheckedItems(onlyLeafNode = true): TreeviewItem[] {
         let checkedItems: TreeviewItem[] = [];
         if (_.isNil(this.internalChildren)) {
             if (this.internalChecked) {
                 checkedItems.push(this);
             }
         } else {
-            for (const child of this.internalChildren) {
-                checkedItems = _.concat(checkedItems, child.getCheckedItems());
+            if(!onlyLeafNode&&this.internalChecked){
+                checkedItems.push(this);
             }
+            for (const child of this.internalChildren) {
+                    checkedItems = _.concat(checkedItems, child.getCheckedItems(onlyLeafNode));
+                }
         }
 
         return checkedItems;

@@ -6,6 +6,7 @@ export class TreeviewConfig {
     hasFilter = false;
     hasCollapseExpand = false;
     maxHeight = 500;
+    onlyLeafNode = true;
 
     get hasDivider(): boolean {
         return this.hasFilter || this.hasAllCheckBox || this.hasCollapseExpand;
@@ -15,8 +16,10 @@ export class TreeviewConfig {
         hasAllCheckBox?: boolean,
         hasFilter?: boolean,
         hasCollapseExpand?: boolean,
-        maxHeight?: number
+        maxHeight?: number,
+        onlyLeafNode?:boolean
     }): TreeviewConfig {
+        fields.hasFilter=false;//屏蔽掉filter,与现有逻辑冲突
         const config = new TreeviewConfig();
         Object.assign(config, fields);
         return config;

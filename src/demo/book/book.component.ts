@@ -16,7 +16,8 @@ export class BookComponent implements OnInit {
         hasAllCheckBox: true,
         hasFilter: true,
         hasCollapseExpand: true,
-        maxHeight: 400
+        maxHeight: 400,
+        onlyLeafNode:false
     });
 
     constructor(

@@ -1,6 +1,6 @@
 {
-  "name": "ngx-treeview",
-  "version": "1.1.0",
+  "name": "ngx-treeview-fork",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "An Angular treeview component with checkbox",
   "scripts": {
@@ -33,13 +33,13 @@
     "recursive",
     "angular tree component"
   ],
-  "author": "Leo Vo <leovo2708@gmail.com>",
+  "author": "linhui",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leovo2708/ngx-treeview.git"
+    "url": "git+https://github.com/linhuiQ/ngx-treeview"
   },
   "bugs": {
-    "url": "https://github.com/leovo2708/ngx-treeview/issues"
+    "url": "https://github.com/linhuiQ/ngx-treeview/issues"
   },
   "main": "./bundles/ngx-treeview.umd.js",
   "module": "./src/index.js",

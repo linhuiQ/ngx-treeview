@@ -111,19 +111,19 @@ export class TreeviewComponent implements OnChanges, TreeviewParserComponent {
     }
 
     onItemCheckedChange(item: TreeviewItem, checked: boolean) {
-        if (this.allItem.checked !== checked) {
-            let allItemChecked = true;
-            for (const filterItem of this.filterItems) {
-                if (!filterItem.checked) {
-                    allItemChecked = false;
-                    break;
-                }
-            }
+        // if (this.allItem.checked !== checked) {
+        //     let allItemChecked = true;
+        //     for (const filterItem of this.filterItems) {
+        //         if (!filterItem.checked) {
+        //             allItemChecked = false;
+        //             break;
+        //         }
+        //     }
 
-            if (this.allItem.checked !== allItemChecked) {
-                this.allItem.checked = allItemChecked;
-            }
-        }
+        //     if (this.allItem.checked !== allItemChecked) {
+        //         this.allItem.checked = allItemChecked;
+        //     }
+        // }
 
         if (item instanceof FilterTreeviewItem) {
             item.updateRefChecked();
@@ -152,7 +152,7 @@ export class TreeviewComponent implements OnChanges, TreeviewParserComponent {
         let checkedItems: TreeviewItem[] = [];
         if (!_.isNil(this.items)) {
             for (const item of this.items) {
-                checkedItems = _.concat(checkedItems, item.getCheckedItems());
+                checkedItems = _.concat(checkedItems, item.getCheckedItems(this.config.onlyLeafNode));
             }
         }
 

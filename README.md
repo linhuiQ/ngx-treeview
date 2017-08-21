@@ -32,9 +32,10 @@ You can customize CSS yourself to break down dependencies to Bootstrap & Font Aw
 
 ## Installation
 
-After install the above dependencies, install `ngx-treeview` via:
+After install the above dependencies, install `ngx-treeview-fork` via:
+
 ```shell
-yarn add ngx-treeview
+npm install ngx-treeview-fork
 ```
 Once installed you need to import our main module in your application module:
 ```js
